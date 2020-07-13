@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300&family=Open+Sans:wght@300;400;700&family=Playfair+Display&display=swap');
+
+*{
+/* 
+  font-family: 'Noto Sans JP', sans-serif; */
+font-family: 'Open Sans', sans-serif;
+}
+
+body{
+  margin: auto 0;
+}
+
+
+ul>li{
+  display: block;
+  padding-top: 5rem;
+  padding-left: 1rem;
+  text-align: left;
+}
+li{
+  color: rgb(99, 99, 99);
+}
+li:hover::after {
+  background-color: #000;
+  content: "";
+  display: inline-block;
+  height: 1px;
+  position: relative;
+  vertical-align: middle;
+  margin-left:20px;
+  width: 50%;
+}
+li:hover{
+  color: #000;
+}
+
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 0.7fr 0.8fr 0.9fr 1.6fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "SideBar SideBar aboveimg aboveimg aboveimg aimg2" "SideBar SideBar aboveimg aboveimg aboveimg ." "SideBar SideBar imgmain imgmain imgmain imgmain" "SideBar SideBar imgmain imgmain imgmain imgmain" "SideBar SideBar imgmain imgmain imgmain imgmain""SideBar SideBar  . . . .";
+  height: 100vh;
+}
+
+.SideBar {
+  display: grid;
+  grid-template-columns: 0.6fr 1.4fr;
+  grid-template-rows: 0.5fr 1.5fr 1fr 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "Logo ." ". side-menu" ". side-menu" ". .";
+  grid-area: SideBar;
+  background-color: darkgreen;
+  
+}
+.bgimg{
+  background-image: url('./img/brooke-lark-08bOYnH_r_E-unsplash.jpg');
+  background-position: 40% 20%;
+  background-size: cover;
+  
+
+}
+
+.Logo { grid-area: Logo; 
+background-color: #4059e7;
+height: 100px;
+width:100px;
+}
+.Logo p{
+  font-family: 'Playfair Display', serif;
+  font-size: 80px;
+  margin: auto 0;
+  padding-left: 25px;
+  line-height: 1.2em;
+  color: #fff;
+
+}
+
+.side-menu { grid-area: side-menu; }
+
+
+
+.aboveimg { grid-area: aboveimg; background-color: aqua; }
+
+
+.aimg2 > p {
+
+  font-family: 'Noto Sans JP', sans-serif;
+  font-size: 30px;
+  padding-left: 25px;
+  line-height: 1.2em;
+  color: rgb(99, 99, 99);
+  padding-top: 40px;
+  justify-self: end;
+  text-transform: capitalize;
+}
+.bgimg-above{
+  background-image: url('./img/yulia-khlebnikova-moBQMk---6g-unsplash.jpg');
+  background-position: 50% 50%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+
+.aimg2 { grid-area: aimg2 }
+
+.imgmain { grid-area: imgmain;}
+
+.bgimg-main{
+  background-image: url('./img/charles-deluvio-D-vDQMTfAAU-unsplash.jpg');
+  background-position: 40% 20%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imgmain > p {
+
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  padding-left: 25px;
+  line-height: 1.2em;
+  color: rgb(12, 12, 12);
+  justify-self: end;
+}
