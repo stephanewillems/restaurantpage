@@ -2,7 +2,7 @@
 
 *{
 /* 
-  font-family: 'Noto Sans JP', sans-serif; */
+   */
 font-family: 'Open Sans', sans-serif;
 }
 
@@ -10,6 +10,9 @@ body{
   margin: auto 0;
 }
 
+h1{
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
 ul>li{
   display: block;
@@ -38,10 +41,11 @@ li:hover{
 
 .grid-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 0.7fr 0.8fr 0.9fr 1.6fr;
+  grid-template-columns: 180px 180px 0.7fr 0.8fr 0.9fr 1.6fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
   gap: 0px 0px;
-  grid-template-areas: "SideBar SideBar aboveimg aboveimg aboveimg aimg2" "SideBar SideBar aboveimg aboveimg aboveimg ." "SideBar SideBar imgmain imgmain imgmain imgmain" "SideBar SideBar imgmain imgmain imgmain imgmain" "SideBar SideBar imgmain imgmain imgmain imgmain""SideBar SideBar  . . . .";
+  grid-template-areas: "SideBar SideBar text text text text" "SideBar SideBar text text text text" "SideBar SideBar text text text text" "SideBar SideBar text text text text" "SideBar SideBar text text text text";
+
   height: 100vh;
 }
 
@@ -65,14 +69,14 @@ li:hover{
 
 .Logo { grid-area: Logo; 
 background-color: #4059e7;
-height: 100px;
-width:100px;
+height: 80px;
+width:80px;
 }
 .Logo p{
   font-family: 'Playfair Display', serif;
-  font-size: 80px;
+  font-size: 60px;
   margin: auto 0;
-  padding-left: 25px;
+  padding-left: 20px;
   line-height: 1.2em;
   color: #fff;
 
@@ -80,47 +84,14 @@ width:100px;
 
 .side-menu { grid-area: side-menu; }
 
-
-
-.aboveimg { grid-area: aboveimg; background-color: aqua; }
-
-
-.aimg2 > p {
-
-  font-family: 'Noto Sans JP', sans-serif;
-  font-size: 30px;
-  padding-left: 25px;
-  line-height: 1.2em;
-  color: rgb(99, 99, 99);
-  padding-top: 40px;
-  justify-self: end;
-  text-transform: capitalize;
-}
-.bgimg-above{
-  background-image: url('./img/yulia-khlebnikova-moBQMk---6g-unsplash.jpg');
-  background-position: 50% 50%;
-  background-size: cover;
-  background-repeat: no-repeat;
+.text > p, h1{
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
-
-.aimg2 { grid-area: aimg2 }
-
-.imgmain { grid-area: imgmain;}
-
-.bgimg-main{
-  background-image: url('./img/charles-deluvio-D-vDQMTfAAU-unsplash.jpg');
-  background-position: 40% 20%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.imgmain > p {
-
-  font-family: 'Playfair Display', serif;
-  font-size: 50px;
-  padding-left: 25px;
-  line-height: 1.2em;
-  color: rgb(12, 12, 12);
-  justify-self: end;
+.text { grid-area: text; 
+border: 1px solid rgb(219, 219, 219);
+border-radius: 15px;
+padding:30px;
+margin: 30px;
 }
